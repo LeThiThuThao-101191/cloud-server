@@ -1,11 +1,11 @@
-const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+require('dotenv').config(); // Nạp biến môi trường
+const mongoose = require('mongoose');
 
 const connectDB = async() => {
     try{
         // Ket noi voi mongodb
-        await mongoose.connect('mongodb://localhost:27017/ltdd');
+        await mongoose.connect('mongodb+srv://thao101191:dBM8FYL4lcdSCyTX@cluster0.clm1j.mongodb.net/cloud_server?retryWrites=true&w=majority&appName=Cluster0');
         console.log('Connect successfully!!!');
 
     }
